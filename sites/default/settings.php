@@ -231,7 +231,7 @@ $databases = array();
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
  */
-$drupal_hash_salt = '';
+$drupal_hash_salt = 'mwb4rNUsUjf4eVP1kBh-3akI9_2G5TUevUDUc_dpdUc';
 
 /**
  * Location of the site configuration files.
@@ -656,3 +656,15 @@ ini_set('session.cookie_lifetime', 2000000);
 # if (file_exists(DRUPAL_ROOT . '/' . $conf_path . '/settings.local.php')) {
 #   include DRUPAL_ROOT . '/' . $conf_path . '/settings.local.php';
 # }
+$settings['install_profile'] = 'standard';
+$config_directories['active']['path'] = 'config_GDLBHbl5uhHam2bfTzd8td325g0bel8jwk3HMw0aUZ0/active';
+$config_directories['staging']['path'] = 'config_GDLBHbl5uhHam2bfTzd8td325g0bel8jwk3HMw0aUZ0/staging';
+
+/**
+ * Include a local settings file if it exists.
+ */
+$local_settings = dirname(__FILE__) . '/settings.local.php';
+if (file_exists($local_settings)) {
+  include $local_settings;
+}
+
